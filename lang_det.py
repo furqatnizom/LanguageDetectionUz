@@ -9,10 +9,10 @@ labels = ['English', 'Russian', "Uzbek"]
 
 le.fit_transform(labels)
 
-with open(this_directory/'src/vectorizer.pickle' , 'rb') as f:
+with open(this_directory/'vectorizer.pickle' , 'rb') as f:
     cv = pickle.load(f)
 
-with open(this_directory/'src/langdet.pickle' , 'rb') as f:
+with open(this_directory/'langdet.pickle' , 'rb') as f:
     model = pickle.load(f)
 
 def predict_lang(text):
